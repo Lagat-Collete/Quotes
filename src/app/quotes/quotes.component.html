@@ -1,12 +1,14 @@
 <div class=" row container-fluid d-flex justify-content-around g-0 ml-4 ">
+  <h1 style="text-align: center;">Here you can generate a quote,vote for or against it.</h1>
 <div *ngFor="let quote of quotes; let i= index" class="col-md-4">
   <!-- <div class="container"> -->
  <div class="card mb-4 p-5">
   <p>{{ quote.quote}}</p>
    <p> {{quote.author}}</p>
    <p>{{quote.posted_by}}</p>
-    <p class="btn btn-sucess">{{quote.upvote}}</p>
-    <p class="btn btn-sucess"><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{quote.downvote}}</p>
+    <p>{{quote.upvote}} 
+    {{quote.downvote}}</p>
+    <app-quote-detail *ngIf="quote.showDetail" [quote]="quote" (isDelete)="deleteQuote($event,i)"></app-quote-detail>
  </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 // import { Quote } from '@angular/compiler';
 
 export class Quotes {
+  showDetail: boolean;
   quote: string;
   author: string;
   posted_by: string;
@@ -22,5 +23,6 @@ export class Quotes {
     // this.date_posted = date_posted
     this.upvote= upvote
     this.downvote = downvote
+    this.showDetail= false;
   }
 }
