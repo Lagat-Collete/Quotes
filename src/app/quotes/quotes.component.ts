@@ -8,6 +8,7 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes: Quotes[] = [ 
+    
     new Quotes(
       '"Out of the mountain of despair,a stone of hope."',
       'Martin Luther king jr.',
