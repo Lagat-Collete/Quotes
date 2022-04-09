@@ -7,6 +7,7 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quotes.component.css'],
 })
 export class QuotesComponent implements OnInit {
+  myImage:string = "assets/images/quote1.webp";
   quotes: Quotes[] = [ 
     
     new Quotes(

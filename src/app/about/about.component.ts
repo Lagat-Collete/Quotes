@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class AboutComponent implements OnInit {
-  myImage:string = "assets/images/quote1.webp";
+  myImage:string = "assets/images/quote.jpg";
 
   constructor() { }
 

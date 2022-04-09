@@ -10,12 +10,12 @@ export class Quotes {
   downvote: number;
 
   constructor(
-    quote: string,
-    author: string,
-    posted_by: string,
-    postedDate: Date,
-    upvote: number,
-    downvote: number
+    quote?: string,
+    author?: string,
+    posted_by?: string,
+    postedDate?: Date,
+    upvote?: number,
+    downvote?: number
   ) {
     this.quote = quote
     this.author = author
