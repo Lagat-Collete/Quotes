@@ -1,35 +1,44 @@
-<div class=" row container-fluid d-flex justify-content-around  ml-4 ">
+<div class=" row container-fluid d-flex justify-content-around  ml-4 " id="quotes">
   <h1 style="text-align: center;">Here you can generate a quote,vote for or against it.</h1>
-<div *ngFor="let quote of quotes; let i= index" class="col-md-4">
-  <!-- differenciating the card with high votes -->
-  <div *ngIf="quote.upvote == highest && quote.upvote > 0 ; then highlight else empty"></div>
-  <!-- craeing ng template with appHighlight and the one without -->
+  <div *ngFor="let quote of quotes; let i= index" class="col-md-4">
+    <!-- differenciating the card with high votes -->
+    <div *ngIf="quote.upvote == highest && quote.upvote > 0 ; then highlight else empty"></div>
+    <!-- craeing ng template with appHighlight and the one without -->
 
-  <ng-template #highlight>
-    <div class="card mb-4 " appHighlight>
-    <p>{{ quote.quote}}</p>
-     <p> <span>Author: </span>{{quote.author}}</p>
-     <p><span>Posted by: </span>{{quote.posted_by}}</p>
-     <p>{{quote.postedDate|date}}</p>
-      <p>{{quote.upvote}} 
-      {{quote.downvote}}</p>
-      <app-quote-detail *ngIf="quote.showDetail" [quote]="quote" (isDelete)="deleteQuote($event,i)"></app-quote-detail>
-   </div>
-  </ng-template>
+    <ng-template #highlight>
+      <div class="card mb-4 " appHighlight>
+        <p>{{ quote.quote}}</p>
+        <p> <span>Author: </span>{{quote.author}}</p>
+        <p><span>Posted by: </span>{{quote.posted_by}}</p>
+        <p>{{quote.postedDate|dateCount}}</p>
+        <p>{{quote.upvote}}
+          {{quote.downvote}}</p>
+        <app-quote-detail *ngIf="quote.showDetail" [quote]="quote" (isDelete)="deleteQuote($event,i)">
+        </app-quote-detail>
+      </div>
+    </ng-template>
 
-  <ng-template #empty>
- <div class="card mb-4 ">
-  <p>{{ quote.quote}}</p>
-   <p id="author"> <span>Author: </span> <em>{{quote.author}}</em></p>
-   <p id="posted"><span>Posted by: </span><em>{{quote.posted_by}}</em></p>
-   <p>{{quote.postedDate | date}}</p>
-    <p>{{quote.upvote}} 
-    {{quote.downvote}}</p>
-    <app-quote-detail *ngIf="quote.showDetail" [quote]="quote" (isDelete)="deleteQuote($event,i)"></app-quote-detail>
- </div>
- </ng-template>
+    <ng-template #empty>
+      <div class="card mb-4 ">
+        <p>{{ quote.quote}}</p>
+        <p id="author"> <span>Author: </span> <em>{{quote.author}}</em></p>
+        <p id="posted"><span>Posted by: </span><em>{{quote.posted_by}}</em></p>
+        <p>{{quote.postedDate|dateCount}}</p>
+        <p>{{quote.upvote}}
+          {{quote.downvote}}</p>
+        <app-quote-detail *ngIf="quote.showDetail" [quote]="quote" (isDelete)="deleteQuote($event,i)">
+        </app-quote-detail>
+      </div>
+    </ng-template>
   </div>
 </div>
-  
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
 
-
+    </div>
+    <div class="col-md-6">
+      <app-quote-form></app-quote-form>
+    </div>
+  </div>
+</div>

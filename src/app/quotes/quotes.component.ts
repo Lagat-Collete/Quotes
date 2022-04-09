@@ -13,7 +13,7 @@ export class QuotesComponent implements OnInit {
       '"Out of the mountain of despair,a stone of hope."',
       'Martin Luther king jr.',
       'Lagat mine',
-      new Date(2022,3,9),
+      new Date(2022,3,1),
       0,
       0
     ),
