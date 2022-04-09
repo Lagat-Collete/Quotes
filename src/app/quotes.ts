@@ -1,13 +1,26 @@
-import { Quote } from "@angular/compiler"
+// import { Quote } from '@angular/compiler';
 
 export class Quotes {
   quote: string;
   author: string;
   posted_by: string;
-upvote:number;
-downvote:number;
+  // date_posted:Date;
+  upvote: number;
+  downvote: number;
 
-  constructor(quote:string, author:string,posted_by:string,upvote:number,downvote:number) {
-  this.quote = quote;
+  constructor(
+    quote: string,
+    author: string,
+    posted_by: string,
+    // date_posted:Date,
+    upvote: number,
+    downvote: number
+  ) {
+    this.quote = quote
+    this.author = author
+    this.posted_by = posted_by
+    // this.date_posted = date_posted
+    this.upvote= upvote
+    this.downvote = downvote
   }
 }

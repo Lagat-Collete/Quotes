@@ -1,4 +1,9 @@
-<ul *ngFor="let quote of quotes">
-  <li>{{ quote}}</li>
+<div *ngFor="let quote of quotes">
+  <p>{{ quote.quote}}</p>
+   <p> {{quote.author}}</p>
+   <p>{{quote.posted_by}}</p>
+    <p class="btn btn-sucess">{{quote.upvote}}</p>
+    <p class="btn btn-sucess"><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{quote.downvote}}</p>
+  
 
-</ul>
+</div>
