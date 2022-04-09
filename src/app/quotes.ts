@@ -5,7 +5,7 @@ export class Quotes {
   quote: string;
   author: string;
   posted_by: string;
-  // date_posted:Date;
+  postedDate:Date;
   upvote: number;
   downvote: number;
 
@@ -13,14 +13,14 @@ export class Quotes {
     quote: string,
     author: string,
     posted_by: string,
-    // date_posted:Date,
+    postedDate: Date,
     upvote: number,
     downvote: number
   ) {
     this.quote = quote
     this.author = author
     this.posted_by = posted_by
-    // this.date_posted = date_posted
+    this.postedDate = new Date
     this.upvote= upvote
     this.downvote = downvote
     this.showDetail= false;
