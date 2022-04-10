@@ -1,14 +1,14 @@
 <!-- <div class="row container d-flex justify-content-around g-0 mt-0 p-3"> -->
 <h3>Add a Quote and vote for the one you like.</h3>
 <div class="col-md-4 mt-3 d-inline-block" *ngFor="let quote of quotes; let i=index">
-  <div class="card p-3 m-2 bg-primary text-white">
+  <div class="card p-3 m-2">
     <div id="highlight" class="card p-3" appHighlight *ngIf="quote.votes === totalVotes && quote.votes>0 ">
       <p style="background-color: green;"> Liked Quote </p>
     </div>
-      <p class="text-black">{{quote.quote}}</p>
+      <p>{{quote.quote}}</p>
       <p>Author{{quote.author}}</p>
       <p>Posted By:{{quote.posted_by}}</p>
-      <p>Time Elapse:{{quote.postedDate|dateCount}} days.</p>
+      <p>{{quote.postedDate|dateCount}}</p>
     <div class="d-flex justify-content-between">
       <div class="d-flex justify-content-around">
         <button id="click" (click)="encouraged(i)"><i class="fa fa-thumbs-up"></i>{{quote.votes}}</button>

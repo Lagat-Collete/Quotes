@@ -1,4 +1,26 @@
-.myImage{
-  background-color: #D1E7FE;
-  color: #D1E7FE;
+img{
+border-radius: 20px;
+box-shadow: 2px 2px #4BA5FB;
+border: outset;
+}
+form{
+  
+  border: 1px rgb(6, 7, 7) solid;
+  margin: 1em;
+  background-color:#D3E8FE;
+  line-height: 25px;
+  padding-left: 20px;
+}
+#form{
+  border-radius: 20px;
+  background-color: #92BAE8;
+  height: 25em;
+}
+#add-quote{
+background-color: #92B9E8;
+margin:0 50% 0 50%;
+width: 150px;
+font-weight: 900;
+font-size: larger;
+color: #3E3A70;
 }

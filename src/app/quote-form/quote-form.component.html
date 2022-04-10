@@ -1,10 +1,10 @@
 <div class="container-fluid mt-4">
   <div class="row"> 
     <div class="col-md-6 mb-5"><img [src]=image></div>
-    <div class="col-md-6">
+    <div id="form" class="col-md-6">
       <div class="card">
         <h2 class="text-center">Add a Quote</h2>
-        <hr>
+        
         <!-- #quoteForm=ngForm...it wil, provide the form with additional features
    -->
         <form (ngSubmit)="submitQuote(); quoteForm.resetForm({})" #quoteForm="ngForm">
@@ -12,7 +12,7 @@
 
             <label for="quote">Quote</label>
             <!-- [(ngModel)],newQuote,name, for data binding , prestine allow us to hide the alert when page loads-->
-            <textarea type="text" class="form-control" id="quote" rows="4" placeholder="Type your quote here"
+            <textarea type="text" class="form-control" id="quote" rows="2" placeholder="Type your quote here"
               [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
             <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
               <p>Quote is required</p>
@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="posted-by">Posted By:</label>
+            <label for="posted-by">Posted By:</label><br>
             <input type="text" id="posted-by" placeholder="Your name" [(ngModel)]="newQuote.posted_by" name="posted_by"
               #posted_by="ngModel" required>
             <div [hidden]="posted_by.valid || posted_by.pristine" class="alert alert danger">
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="dateposted">Date Posted</label>
+            <label for="dateposted">Date Posted:</label><br>
             <input type="date" id="dateposted" placeholder="YYMMDD" [(ngModel)]="newQuote.postedDate" name="postedDate"
               #postedDate="ngModel" required>
             <div [hidden]="postedDate.valid || postedDate.pristine" class="alert alert danger">
