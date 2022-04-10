@@ -1,5 +1,5 @@
 import { Component, OnInit,EventEmitter,Input,Output } from '@angular/core';
-import {  Quote } from '../quote';
+import {  Quote } from '../quotes';
 
 @Component({
   selector: 'app-quote',
@@ -16,6 +16,7 @@ quotes: Quote[] = [
   new Quote(' "Code is like humor. When you have to explain it, it is bad."','Cory House','Collete Mine',new Date(2022,4,9),0,0),
   new Quote('"Experience is the name everyone gives to their mistakes."','Oscar Wilde','Collete Mine',new Date(2022,4,9),0,0),
 ]
+
 
 deleteDetails(Complete: any,index: any) {
   if(Complete) {
@@ -37,7 +38,7 @@ addNewQuote(quote:any) {
   this.quotes.push(quote)
 }
 
-showDet(index: any) {
+showInfo(index: any) {
   this.quotes[index].showDetails = !this.quotes[index].showDetails;
   this.quotes[index].showButton = !this.quotes[index].showButton;
 }

@@ -1,5 +1,5 @@
 import { Directive,ElementRef } from '@angular/core';
-import { Quote } from './quote';
+import { Quote } from './quotes';
 @Directive({
   selector: '[appHighlight]'
 })

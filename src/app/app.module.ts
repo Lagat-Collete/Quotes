@@ -8,11 +8,11 @@ import { AboutComponent } from './about/about.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { QuoteComponent } from './quote/quote.component';
 import { DownVoteComponent } from './down-vote/down-vote.component';
-import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
@@ -23,11 +23,11 @@ import { DeleteComponent } from './delete/delete.component';
     HighlightDirective,
     DateCountPipe,
     QuoteFormComponent,
-    FooterComponent,
     QuoteComponent,
     DownVoteComponent,
     QuoteDetailsComponent,
-    DeleteComponent
+    DeleteComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

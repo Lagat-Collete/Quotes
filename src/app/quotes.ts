@@ -1,28 +1,31 @@
-export class Quotes {
+export class Quote {
   public showDetails: boolean;
   public showButton: boolean;
-  public quote: string;
-  public author: string;
-  public posted_by: string;
-  public postedDate: Date;
-  public upvote: number;
-  public downvote: number;
+  public votes: number;
+  quote: string;
+  author: string;
+  posted_by: string;
+  postedDate: Date;
+  upVote: number;
+  downVote: number;
+  
 
   constructor(
     quote: string,
     author: string,
     posted_by: string,
     postedDate: Date,
-    upvote: number,
-    downvote: number
+    upVote: number,
+    downVote: number
   ) {
     this.quote = quote;
     this.author = author;
     this.posted_by = posted_by;
     this.postedDate = new Date();
-    this.upvote = 0;
-    this.downvote = 0;
+    this.upVote = 0;
+    this.downVote = 0;
     this.showDetails = false;
     this.showButton = true;
+    this.votes = 0;
   }
 }

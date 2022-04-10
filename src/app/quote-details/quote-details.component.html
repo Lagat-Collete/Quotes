@@ -1,1 +1,8 @@
-<p>quote-details works!</p>
+<div>
+  <p>{{quotes.posted_by}}</p>
+</div>
+<div>
+  <button (click)="encouraged()"></button><span>{{quotes.upVote}}</span>
+  <button (click)="unlike()"></button><span>{{quotes.downVote}}</span>
+    <div (click)="quoteDelete(true)">Delete</div>
+</div>
