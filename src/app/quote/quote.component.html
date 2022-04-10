@@ -1,19 +1,22 @@
 <div class=" row container-fluid d-flex justify-content-around p-4">
   <h3>Add a Quote and vote for the one you you find helpful.</h3>
   <div class="col-md-4 mt-3" *ngFor="let quote of quotes; let i=index">
-<div class="card p-3">
-  <div id="highlight" class="card p-3" appHighlight *ngIf="quote.votes === totalVotes && quote.votes>0 ">
-    <p> Highest Voted Quote</p>
+    <div class="card p-3">
+      <div id="highlight" class="card p-3" appHighlight *ngIf="quote.votes === totalVotes && quote.votes>0 ">
+        <p> Highest Voted Quote</p>
+      </div>
+      <p>{{quote.description}}</p>
+      <p>{{quote.author}}</p>
+      <p>{{quote.posted_by}}</p>
+      <p>{{quote.postedDate}}</p>
+      <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-around">
+          <button (click)="encouraged(i)">{{quote.votes}}</button>
+          <app-down-vote></app-down-vote>
+        </div>
+        <app-delete (Complete)="deleteDetails($event,i)"></app-delete>
+      </div>
+    </div>
   </div>
-  <p>{{quote.description}}</p>
-  <p>{{quote.author}}</p>
-  <p>{{quote.posted_by}}</p>
-  <p>{{quote.postedDate}}</p>
-  <div class="d-flex justify-content-between">
-    <div class="d-flex justify-content-around">
-      <button (click)="encouraged(i)">{{quote.votes}}</button>
-      
 </div>
-  </div>
-
-</div>
+<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>

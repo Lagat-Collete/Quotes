@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { QuoteComponent } from './quote/quote.component';
 import { DownVoteComponent } from './down-vote/down-vote.component';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DownVoteComponent } from './down-vote/down-vote.component';
     QuoteFormComponent,
     FooterComponent,
     QuoteComponent,
-    DownVoteComponent
+    DownVoteComponent,
+    QuoteDetailsComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

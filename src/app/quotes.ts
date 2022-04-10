@@ -1,5 +1,5 @@
 export class Quotes {
-  public showDetail: boolean;
+  public showDetails: boolean;
   public showButton: boolean;
   public quote: string;
   public author: string;
@@ -22,7 +22,7 @@ export class Quotes {
     this.postedDate = new Date();
     this.upvote = 0;
     this.downvote = 0;
-    this.showDetail = false;
+    this.showDetails = false;
     this.showButton = true;
   }
 }
