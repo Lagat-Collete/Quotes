@@ -2,7 +2,6 @@
 - an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
 #### latest version  10/04/20222
 #### By **Collete Mine**
- ![dercription](/docs/assets/images/screen1.png)
 ## Tables of Content
 1. [Description](Description)
 2. [User-stories](User-stories)
