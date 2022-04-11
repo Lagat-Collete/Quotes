@@ -8,7 +8,7 @@
       <p>{{quote.quote}}</p>
       <p>Author: {{quote.author}}</p>
       <p>Posted By: {{quote.posted_by}}</p>
-      <p>{{quote.postedDate|dateCount}}</p>
+      <p>Posted <span style="color: #F074A0;">{{quote.postedDate |dateCount}} </span> days ago.</p>
     <div class="d-flex justify-content-between">
       <div class="d-flex justify-content-around">
         <button id="click" (click)="encouraged(i)"><i class="fa fa-thumbs-up"></i>{{quote.votes}}</button>

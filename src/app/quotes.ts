@@ -21,7 +21,7 @@ export class Quote {
     this.quote = quote;
     this.author = author;
     this.posted_by = posted_by;
-    this.postedDate = new Date();
+    this.postedDate = postedDate;
     this.upVote = 0;
     this.downVote = 0;
     this.showDetails = false;

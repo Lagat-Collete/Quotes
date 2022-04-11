@@ -9,12 +9,12 @@ import {  Quote } from '../quotes';
 export class QuoteComponent implements OnInit {
 @Output() isDelete = new EventEmitter<boolean>();
 quotes: Quote[] = [
-  new Quote('"First, solve the problem. Then, write the code."',' John Johnson','Collete Mine',new Date(2022,4,9),0,0),
-  new Quote('"Make it work, make it right, make it fast."','Kent Beck','Collete Mine',new Date(2022,4,9),0,0),
+  new Quote('"First, solve the problem. Then, write the code."',' John Johnson','Collete Mine',new Date(2022,3,9),0,0),
+  new Quote('"Make it work, make it right, make it fast."','Kent Beck','Collete Mine',new Date(2022,3,9),0,0),
   new Quote('"Before software can be reusable it first has to be usable"','Ralph Johnson','Collete Mine',new Date(2022,4,9),0,0),
-  new Quote('"Fix the cause, not the symptom."','Steve Maguire','Collete Mine',new Date(2022,4,9),0,0),
-  new Quote(' "Code is like humor. When you have to explain it, it is bad."','Cory House','Collete Mine',new Date(2022,4,9),0,0),
-  new Quote('"Experience is the name everyone gives to their mistakes."','Oscar Wilde','Collete Mine',new Date(2022,4,9),0,0),
+  new Quote('"Fix the cause, not the symptom."','Steve Maguire','Collete Mine',new Date(2022,1,9),0,0),
+  new Quote(' "Code is like humor. When you have to explain it, it is bad."','Cory House','Collete Mine',new Date(2022,1,9),0,0),
+  new Quote('"Experience is the name everyone gives to their mistakes."','Oscar Wilde','Collete Mine',new Date(2022,2,9),0,0),
 ]
 
 
