@@ -6,3 +6,12 @@ img{
 #about{
   margin-top: 7em;
 }
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  color: #2F2E74;
+}
+p{
+  color: #913499;
+  font-weight: 600;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
