@@ -3,11 +3,11 @@
 <div class="col-md-4 mt-3 d-inline-block" *ngFor="let quote of quotes; let i=index">
   <div class="card p-3 m-2">
     <div id="highlight" class="card p-3 bg-red" appHighlight *ngIf="quote.votes === totalVotes && quote.votes>0 ">
-      <p style="background-color: green;"> Liked Quote </p>
+      <p> Inspiring Quote </p>
     </div>
       <p>{{quote.quote}}</p>
-      <p>Author{{quote.author}}</p>
-      <p>Posted By:{{quote.posted_by}}</p>
+      <p>Author: {{quote.author}}</p>
+      <p>Posted By: {{quote.posted_by}}</p>
       <p>{{quote.postedDate|dateCount}}</p>
     <div class="d-flex justify-content-between">
       <div class="d-flex justify-content-around">
